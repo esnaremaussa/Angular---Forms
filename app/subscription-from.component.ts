@@ -1,0 +1,16 @@
+import {Component} from 'angular2/core';
+
+@Component({
+	selector: 'subscription-form',
+    templateUrl: 'app/subscription-form.component.html',
+})
+export class SubscriptionFormComponent{
+	validateEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(email);
+	}
+	onSubmit(form) {
+		console.log(form);
+	}
+
+}
